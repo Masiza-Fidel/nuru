@@ -1,2 +1,2 @@
-web: gunicorn nuru.wsgi  --log-file -
+web: gunicorn quillquest.wsgi --log-file -
  
