@@ -1,2 +1,2 @@
-web: gunicorn quillquest.wsgi:application --log-file - --preload
+web: gunicorn quillquest.wsgi:application --log-file --reload
  
