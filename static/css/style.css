@@ -610,3 +610,43 @@ p {
   white-space: nowrap;
   text-overflow: ellipsis;
 }
+
+
+
+.navbar-dark .navbar-toggler {
+  border: 2px solid blue; /* Retained the initial color */
+}
+
+.nav-link {
+  background-color: blue;
+  color: whitesmoke;
+}
+.nav-link btn-custom :hover{
+background-color:navy;
+}
+  .navbar-logo {
+      max-width: 100px;
+      height: auto;
+      object-fit: contain;
+      border-radius:50%;
+      overflow:hidden;
+
+  }
+  .navbar {
+      padding: 10px; /* Adjust the padding as needed */
+  }
+  
+
+@media (min-width: 768px) {
+  .navbar-nav {
+      margin-right: auto; /* Align menu items to the right for larger screens */
+  }
+
+  .navbar-toggler {
+      order: -1; /* Move the toggler to the left for larger screens */
+  }
+
+  .navbar-nav .nav-item {
+      margin-right: 10px; /* Adjust the spacing between navbar items for larger screens */
+  }
+}

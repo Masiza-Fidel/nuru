@@ -10,58 +10,71 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <!-- Font Awesome CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
-    <style>
-        <style>
-            /* Custom styles */
-            
-        
-            .navbar-dark .navbar-toggler {
-                border: 2px solid blue; /* Retained the initial color */
-            }
-        
-            .nav-link {
-                background-color: blue;
-                color: whitesmoke;
-            }
-            .nav-link btn-custom :hover{
-              background-color:navy;
-            }
-                .navbar-logo {
-                    max-width: 100px;
-                    height: auto;
-                    object-fit: contain;
-                    border-radius:50%;
-                    overflow:hidden;
+   <style>
+    .navbar-dark .navbar-toggler {
+    border: 2px solid blue; /* Retained the initial color */
+   }
 
-                }
-                .navbar {
-                    padding: 10px; /* Adjust the padding as needed */
-                }
-                
+.nav-link {
+    background-color: blue;
+    color: whitesmoke;
+}
+.nav-link btn-custom :hover{
+  background-color:navy;
+}
+    .navbar-logo {
+        max-width: 100px;
+        height: auto;
+        object-fit: contain;
+        border-radius:50%;
+        overflow:hidden;
+
+    }
+    .navbar {
+        padding: 10px; /* Adjust the padding as needed */
+    }
+    .custom-toggler {
+        background-color: blue; /* Set your desired background color */
+        max-width: 60px; /* Set your desired width */
+        height: 50px; /* Set your desired height */
+    }
+    
+    .custom-toggler:focus {
+        outline: none; /* Remove the default focus outline */
+    }
+    
+
+@media (min-width: 768px) {
+    .navbar-nav {
+        margin-right: auto; /* Align menu items to the right for larger screens */
+    }
+
+    .navbar-toggler {
+        order: -1; /* Move the toggler to the left for larger screens */
+    }
+
+    .navbar-nav .nav-item {
+        margin-right: 10px; /* Adjust the spacing between navbar items for larger screens */
+    }
+}
+
+
+   </style>    
+        
             
-            @media (min-width: 768px) {
-                .navbar-nav {
-                    margin-right: auto; /* Align menu items to the right for larger screens */
-                }
         
-                .navbar-toggler {
-                    order: -1; /* Move the toggler to the left for larger screens */
-                }
-        
-                .navbar-nav .nav-item {
-                    margin-right: 10px; /* Adjust the spacing between navbar items for larger screens */
-                }
-            }
-        </style>
-        
-    </style>
 </head>
 <body>
 
 <!-- Navbar with Toggle Button -->
 <nav class="navbar navbar-expand-md navbar-dark bg-whitesmoke">
+   
     
     <img src="/static/images/IMG-20240104-WA0031.jpg" alt="{{ blog.title }}" class="navbar-logo">
+    <button class="navbar-toggler custom-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    
 
 
     <div class="collapse navbar-collapse" id="navbarNav">
@@ -81,6 +94,8 @@
         </ul>
     </div>
 </nav>
+
+
 
 <div class="content">
     {% block content %}{% endblock %}
