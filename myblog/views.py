@@ -53,7 +53,7 @@ def blog_delete(request, pk):
     blog.delete()
     return redirect('blog:blog_dashboard')
 
-@login_required(login_url='blog:login')
+#@login_required(login_url='blog:login')
 def blog_dashboard(request):
     blogs = Blog.objects.all()
     return render(request, 'blog_dashboard.html', {'blogs': blogs})
